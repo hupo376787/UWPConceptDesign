@@ -1,0 +1,103 @@
+﻿<Page
+    x:Class="UWPConceptDesign.DesktopContextMenuPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPConceptDesign"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource SystemControlChromeMediumLowAcrylicWindowMediumBrush}">
+
+    <Grid Margin="12 24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <SymbolIcon Symbol="View" Width="32" HorizontalAlignment="Left"/>
+            <TextBlock Text="View" Margin="48 0 0 0" VerticalAlignment="Center"/>
+            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE974;" Foreground="Gray" HorizontalAlignment="Right"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <SymbolIcon Symbol="Sort" Width="32" HorizontalAlignment="Left"/>
+            <TextBlock Text="Sort" Margin="48 0 0 0" VerticalAlignment="Center"/>
+            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE974;" Foreground="Gray" HorizontalAlignment="Right"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <SymbolIcon Symbol="Add" Width="32" HorizontalAlignment="Left"/>
+            <TextBlock Text="Add" Margin="48 0 0 0" VerticalAlignment="Center"/>
+            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE974;" Foreground="Gray" HorizontalAlignment="Right"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <SymbolIcon Symbol="Refresh" Width="32" HorizontalAlignment="Left"/>
+            <TextBlock Text="Refresh" Margin="48 0 0 0" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <SymbolIcon Symbol="Paste" Foreground="Gray" Width="32" HorizontalAlignment="Left"/>
+            <TextBlock Text="Paste" Foreground="Gray" Margin="48 0 0 0" VerticalAlignment="Center"/>
+        </Grid>
+
+        <MenuFlyoutSeparator Grid.Row="5"/>
+
+        <Grid Grid.Row="6">
+            <FontIcon FontFamily="Segoe MDL2 Assets" Width="32" Glyph="&#xF5A7;" HorizontalAlignment="Left"/>
+            <TextBlock Text="Open powershell" Margin="48 0 0 0" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="7" Margin="-12 0 -12 -24" Background="{ThemeResource SystemControlAcrylicElementBrush}">
+            <StackPanel>
+                <RelativePanel Margin="18 18 12 0">
+                    <TextBlock Text="Change your background" FontWeight="Bold" FontSize="18"/>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7F9;" Foreground="{StaticResource SystemAccentColor}" RelativePanel.AlignRightWithPanel="True" Margin="0 4 56 0"/>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;" Foreground="{StaticResource SystemAccentColor}" RelativePanel.AlignRightWithPanel="True" Margin="0 0 12 0"/>
+                </RelativePanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 32 12 0">
+                    <Grid Width="80" Height="80" Margin="12 0 0 0" CornerRadius="4">
+                        <StackPanel VerticalAlignment="Center">
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE948;" Foreground="Gray"/>
+                            <TextBlock Text="New" HorizontalAlignment="Center" Margin="0 4 0 0" Foreground="Gray"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid  Width="80" Height="80" Margin="12 0 0 0" CornerRadius="4">
+                        <Grid.Background>
+                            <ImageBrush ImageSource="/Assets/DesktopContext/arno-smit-qY_yTu7YBT4-unsplash.jpg" Stretch="UniformToFill"/>
+                        </Grid.Background>
+                        <Grid>
+                            <Border Background="Gray" Opacity="0.5"/>
+                            <FontIcon FontFamily="Segoe MDL2 Assets" FontSize="28" Glyph="&#xE73E;" Foreground="White"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Width="80" Height="80" Margin="12 0 0 0" CornerRadius="4">
+                        <Grid.Background>
+                            <ImageBrush ImageSource="/Assets/DesktopContext/azmi-semih-okay-3_qd3aiAFjc-unsplash.jpg" Stretch="UniformToFill"/>
+                        </Grid.Background>
+                    </Grid>
+                    <Grid Width="80" Height="80" Margin="12 0 0 0" CornerRadius="4">
+                        <Grid.Background>
+                            <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/DesktopContext/sean-o-KMn4VEeEPR8-unsplash.jpg"/>
+                        </Grid.Background>
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <Grid.ContextFlyout>
+            <MenuFlyout ElementSoundMode="FocusOnly">
+                <MenuFlyoutItem Width="320" Text="View" Icon="View"  Height="48" Background="{ThemeResource SystemControlChromeMediumLowAcrylicWindowMediumBrush}"/>
+                <MenuFlyoutItem Text="eee" Height="48"/>
+                <MenuFlyoutItem Text="eee" Height="48"/>
+                <MenuFlyoutItem Text="eee" Height="48"/>
+            </MenuFlyout>
+                
+        </Grid.ContextFlyout>
+    </Grid>
+</Page>
